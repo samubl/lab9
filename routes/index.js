@@ -5,12 +5,12 @@ var labs = require('../labs.json');
 
 exports.view = function(req, res){
   if(labs.length < 9) {
-  	var todaysLab = [{
-		"id": "lab-9",
-		"title": "Debugging 101",
-		"date": "March 7",
-		"image": "debug.png"
-	}];
+  	var todaysLab = {
+			"id": "lab-9",
+			"title": "Debugging 101",
+			"date": "March 7",
+			"image": "debug.png"
+		}; //The fix was to get rid of the square brackets
 
   	labs.push(todaysLab);
   }
